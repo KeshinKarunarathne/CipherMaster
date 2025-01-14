@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutColumnar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/columnar_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="A transposition cipher is a particular category of cipher in which the positions held by individual letters in your message are shifted according to a particular rule or set of rules so that the encrypted message is a permutation of the original message. The framework for these types of ciphers were first put forth and used by Egyptians and Greeks. The columnar transposition cipher is a particular type of transposition cipher." />
+
+        <TextView
+            android:id="@+id/columnar_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="In this particular type of transpositions cipher, the message to be encrypted is written in rows. The length of the rows is determined by the length of the key. Finally, according to the order in which the letters in the key appear in the alphabet, the columns of letters are written one after the other. For example if you take the key to be 'KEY' and the message to be encrypted as 'HELP', the message is written as follows:" />
+
+        <ImageView
+            android:id="@+id/columnar_example_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/columnar_example" />
+
+        <TextView
+            android:id="@+id/columnar_example_continued"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="If the final row of letters does not span the entire length of the key, lowercase Xs will be filled in as shown above. This particular approach to the columnar transposition cipher is the called the regular approach, while there is second approach called the irregular approach, where an incomplete final row is left as it is and the final step progresses accordingly." />
+
+
+        <TextView
+            android:id="@+id/columnar_final_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="The columns of letters are then written according to the order in which the letters in the key appear in the alphabet (this order is indicated in the diagram above in parentheses). Therefore the final message is 'Ex HP Lx'." />
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-4383335608939724/8879392567">
+        </com.google.android.gms.ads.AdView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/toIntermediate"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="Back"
+                android:textColor="#03A9F4"
+                android:textColorHint="#03A9F4"
+                android:textSize="10sp"
+                android:onClick="toIntermediate"/>
+
+            <Button
+                android:id="@+id/toColumnarImplementer"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="To The Cipher Implementer"
+                android:textColor="#03A9F4"
+                android:textColorHint="#03A9F4"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>

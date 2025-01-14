@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutFourSquare">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/four_square_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="The four-square cipher is a type of polygraphic substitution ciphers and it uses a manual symmetric encryption technique. Just like the bifid cipher, the four-square cipher was also invented by the French cryptographer Felix Delastelle, and the similarities shared between these two ciphers can be clearly seen. Just like the bifid cipher, the four-square uses four polybius squares, hence the name four-square." />
+
+        <TextView
+            android:id="@+id/four_square_example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="There are two polybius squares which consist of the letters in the normal alphabetical order. These are shown below as the squares on the top left corner and lower right corner. The other two have been created according to the two keys decided upon. If the two keywords chosen are 'EAGLES' and 'ZEBRAS', we must ensure that there are no repeated letters in each of these keywords (as described in the about section of the bifid cipher). This means that the first keyword should be changed to 'EAGLS' while the second keyword remains as it is. The squares created using the chosen keys are done so as described in the section about the bifid cipher. The four squares should be arranged as shown below." />
+
+        <ImageView
+            android:id="@+id/four_square_example_image"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/four_square_example" />
+
+        <TextView
+            android:id="@+id/four_square_example_continued"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:text="We must ensure that the message that we intend to encrypt has an even number of letters. So, if the message has an odd number of letters we add an extra 'X' at the end. Then we break the message into pairs of letters starting with pairing the first and second letters, second and third letters and so on. Then, starting with the first pair of letters, we locate the first letter in the top left square and note its row number and we locate the second letter in the bottom right square and record its column number. We then note the letter in the position corresponding to that row and column numbers. We then proceed to do the opposite where we note the column number of the first letter and the row number of the second letter. We then locate and note the letter in the position corresponding to the newly found row and column numbers. This process should be executed with all the pairs of letters in your message in turn.   " />
+
+        <TextView
+            android:id="@+id/four_square_final_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Therefore, if the message to be encrypted is 'HELP', we break the message into pairs of letters - 'HE LP'. The row number of 'H' is 2 and the column number of 'E' is 10. So the letter in row 2 and column 10 is 'H'. Furthermore, the column number of 'H' is 3 and the row number of 'E' is 6. So, the letter in column 3 and row 6 is 'B'. When we consider the second pair of letters, the row number of 'L' is 3 and the column number of 'P' is 10. So, the letter in row 3 and column 10 is 'O'. Furthermore, the column number of 'L' is 1 and the row number of 'P' is 8. So, the letter in row 8 and column 1 is 'H'. Therefore, the final message becomes 'HBOH'." />
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-4383335608939724/2932274770">
+        </com.google.android.gms.ads.AdView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/toIntermediate"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="Back"
+                android:textColor="#03A9F4"
+                android:textColorHint="#03A9F4"
+                android:textSize="10sp"
+                android:onClick="toIntermediate"/>
+
+            <Button
+                android:id="@+id/toFourSquareImplementer"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="To The Cipher Implementer"
+                android:textColor="#03A9F4"
+                android:textColorHint="#03A9F4"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

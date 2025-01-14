@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutBifid">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bifid_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="The bifid cipher was invented by Felix Delastelle in around 1901. This cipher combines the polybius square with transposition. A polybius square is a 5x5 grid into which we place the letters in the alphabet. Since we have 26 letters in the English alphabet and only 25 cells in the grid, we take 'I' and 'J' together as shown below: " />
+
+        <ImageView
+            android:id="@+id/polybius_alphabet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/polybius_alphabet" />
+
+        <TextView
+            android:id="@+id/bifid_polybius_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="To begin with, this cipher removes repeated letters in the key and only keeps the first instance of each letter. Therefore, a key like 'EAGLES' is simplified to 'EAGLS', because the second 'E' is removed. Then a polybius square is created, where the first cells are filled with the altered key, which in this example is 'EAGLS' and the remaining letters in the alphabet are then filled, in ascending order, without repetition as shown below: " />
+
+        <ImageView
+            android:id="@+id/polybius_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/polybius_key" />
+
+        <TextView
+            android:id="@+id/bifid_example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Then the message to be encrypted is considered. In this example, the message will be 'HELP'. The row number and the column number of each of the letters in the message must be retrieved in turn from the second polybius square created using the altered key." />
+
+        <TextView
+            android:id="@+id/bifid_example_continued"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Then the message to be encrypted is considered. In this example, the message will be 'HELP'. The row number and the column number of each of the letters in the message must be retrieved in turn from the second polybius square created using the altered key." />
+
+        <ImageView
+            android:id="@+id/bifid_example_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/bifid_example_table" />
+
+        <TextView
+            android:id="@+id/bifid_example_pairing_numbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Then the numbers retrieved above are written in a single line as each number is paired with the one on its immediate right, starting with the left-most number. Therefore, you get these pairs of numbers: \n\n\t\t\t 21 \t\t\t 14 \t\t\t 51 \t\t\t 41" />
+
+        <TextView
+            android:id="@+id/bifid_example_final_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="These pairs of numbers are interpreted such that the first number in the pair reads the row number and the second number reads the column number. We use the second polybius square once again to translate these numbers to letters. Therefore, 21 represents 'B', 14 represents 'L', 51 represents 'V' and 41 represents 'P'. \n\n Therefore, the encrypted message is  'BLVP'" />
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-4383335608939724/2697127592">
+        </com.google.android.gms.ads.AdView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/toIntermediate"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:onClick="toIntermediate"
+                android:text="Back"
+                android:textColor="#03A9F4"
+                android:textColorHint="#03A9F4"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/toBifidImplementer"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="To The Cipher Implementer"
+                android:textColor="#03A9F4"
+                android:textColorHint="#03A9F4"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
