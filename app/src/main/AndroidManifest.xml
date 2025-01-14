@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fritzdevelopers.ciphermaster">
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4383335608939724~5273219855"/>
+
+        <activity android:name="com.fritzdevelopers.ciphermaster.XORImplementer"/>
+        <activity android:name="com.fritzdevelopers.ciphermaster.VigenereImplementer" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.PlayfairImplementer" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.FourSquareImplementer" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.ColumnarImplementer" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.CaesarImplementer" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.BifidImplementer" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.AutokeyImplementer" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.AffineImplementer" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.AboutXOR" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.AboutVigenere" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.AboutFourSquare" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.AboutPlayfair" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.AboutColumnar" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.AboutBifid" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.AboutAutokey" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.AboutAffine" />
+        <activity android:name="com.fritzdevelopers.ciphermaster.AboutCaesar" />
+        <activity
+            android:name="com.fritzdevelopers.ciphermaster.Intermediate"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.fritzdevelopers.ciphermaster.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

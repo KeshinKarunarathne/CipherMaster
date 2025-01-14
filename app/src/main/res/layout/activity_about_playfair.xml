@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutPlayfair">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/playfair_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="The Playfair cipher was notably the first literal diagram substitution cipher and it was invented by Charles Wheatstone, the British scientist and inventor, in 1854. However, it has been given the name Playfair after Lord Playfair, who used it very frequently. This type of cipher uses the polybius square used in the bifid cipher, but without an interest in row or column numbers specifically. The form of interest is as shown below: " />
+
+        <ImageView
+            android:id="@+id/playfair_square"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/playfair_square" />
+
+        <TextView
+            android:id="@+id/playfair_message_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="To apply this cipher, we must first ensure that our message has an even number of letters. If not, we must add an extra 'X' at the end of our message. Secondly, we must separate the letters in our message into pairs, starting with the first letter, pairing it with the second and moving on in a similar fashion until you get to the end of the message. Then you must ensure that each pair consists of two different letters. If they have the same letter, the second letter in such a pair must be changed to an 'X'. Therefore, a message such as 'BALLOON' must be first changed to 'BALLOONX' to ensure that the message has an even number of letters and then it must be changed to 'BALXOXNX'. " />
+
+        <TextView
+            android:id="@+id/playfair_example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Moving on to looking at how to implement the cipher, if we consider a message like 'HELP', which has even number of letters and four distinct letters already, we first separate the message into the previously mentioned pairs. Thus, we get 'HE LP'. Then we locate the two letters in each pair on the diagram above separately. When we do this, one of three things will always be true: \n\n\t\t\t 1. Both letters will appear in the same column \n\t\t\t 2. Both letters will appear in the same row \n\t\t\t 3.The two letters will form opposite corners of a square or rectangle  " />
+
+        <TextView
+            android:id="@+id/playfair_example_continued"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="If the first condition above is satisfied, then both letters should be replaced by the letters which are one row down respectively. If one of the letters appear in the last row, then it should jump to the first row. If the second condition above is satisfied, then both letters should be replaced by the letters one column to the right respectively. If one of the letters appear in the last row, then it should jump to the first column. If the third condition above is satisfied, then both letters should be replaced by the letter which is in their respective rows but in the other letter's column. \n\nIn the case of the example message 'HELP', since 'H' and 'E' form the corners of a rectangle, 'H' should be replaced by 'K' and 'E' by 'C'. Looking at the second pair, 'L' and 'P' satisfy the second condition and, therefore, 'L' must be replaced by 'M' and 'P' by 'L'. Therefore, the final message becomes 'KCML'. " />
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-4383335608939724/2781065689">
+        </com.google.android.gms.ads.AdView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/toIntermediate"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:onClick="toIntermediate"
+                android:text="Back"
+                android:textColor="#03A9F4"
+                android:textColorHint="#03A9F4"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/toPlayfairImplementer"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="To The Cipher Implementer"
+                android:textColor="#03A9F4"
+                android:textColorHint="#03A9F4"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

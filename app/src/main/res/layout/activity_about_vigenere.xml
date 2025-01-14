@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutVigenere">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/vigenere_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="The Vigenère cipher is another type of polyalphabetic substitution ciphers and this particular type encrypts messages using a series of interwoven Caesar ciphers. This cipher was first described by Giovan Battista Bellaso in 1553 but got the name Vigenère, because it was misattributed to Blaise de Vigenère, the inventor of the autokey cipher. " />
+
+        <TextView
+            android:id="@+id/vigenere_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Like multiple other ciphers, the Vigenère cipher uses a table that assigns numbers to the letters in the alphabet. This table is shown below: " />
+
+        <ImageView
+            android:id="@+id/alphabet_assignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/affine_alphabet_assignment" />
+
+        <TextView
+            android:id="@+id/vigenere_example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:text="This cipher utilises a key when it comes to encoding the message. For example, if we take the message to be 'HELP' and the key to be 'KEY'. We first work out the numbers that the letters in the key translate to, from the table above: K = 10, E = 4, Y = 24. We then proceed to write these numbers beneath the numbers that the letters in the message translate to. Finally, numbers vertically beneath each other should be added together and the mod function, particularly mod 26, is applied to convert the previous number to one that can be directly translated back to a letter. The entire process is shown in the table below:  " />
+
+        <ImageView
+            android:id="@+id/vigenere_example_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/vigenere_example_table" />
+
+        <TextView
+            android:id="@+id/vigenere_final_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Therefore, the encrypted message is 'RQJZ'." />
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-4383335608939724/6528739003">
+        </com.google.android.gms.ads.AdView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/toIntermediate"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:onClick="toIntermediate"
+                android:text="Back"
+                android:textColor="#03A9F4"
+                android:textColorHint="#03A9F4"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/toVigenereImplementer"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="To The Cipher Implementer"
+                android:textColor="#03A9F4"
+                android:textColorHint="#03A9F4"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
